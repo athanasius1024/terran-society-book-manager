@@ -1,0 +1,32 @@
+Claude Prompt for: 
+
+	Terran Society
+		A New Social Contract
+
+Base Directory:
+/media/infodine/LaCie/z_stash/z-terran/TerranSocietyBook/infobuild/
+
+The best, most recent and accurate information is found in the file: 
+trifold-basic-rights_2021April-reformatJul2025.odt
+
+Primary information for book structure is in:
+Book_outline.md
+
+Read all information in the Base Directory and sub-directories.
+
+When information details conflict, precedence is:
+
+	trifold-basic-rights_2021April-reformatJul2025.odt
+	Book_outline.md
+	Base Directory files
+	reference directory files
+
+The Basic Principles of Terran Society are primary
+The Rights of the People are also Primary
+both as taken from trifold-basic-rights_2021April-reformatJul2025.odt
+
+
+
+
+
+
