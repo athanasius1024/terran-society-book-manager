@@ -24,10 +24,13 @@ echo ""
 
 # Prompt for PostgreSQL admin credentials
 echo "Enter PostgreSQL admin credentials:"
-read -p "PostgreSQL admin username [default: postgres]: " PG_ADMIN_USER
-PG_ADMIN_USER=${PG_ADMIN_USER:-postgres}
+echo "(Default credentials: username='dba', password='sql')"
+echo ""
+read -p "PostgreSQL admin username [default: dba]: " PG_ADMIN_USER
+PG_ADMIN_USER=${PG_ADMIN_USER:-dba}
 
-read -sp "PostgreSQL admin password: " PG_ADMIN_PASSWORD
+read -sp "PostgreSQL admin password [default: sql]: " PG_ADMIN_PASSWORD
+PG_ADMIN_PASSWORD=${PG_ADMIN_PASSWORD:-sql}
 echo ""
 echo ""
 
