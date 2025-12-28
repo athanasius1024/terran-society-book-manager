@@ -14,9 +14,17 @@ This project combines documentation, database design, and content creation for t
 
 ## Web Application
 
-### Quick Start
+## Quick Start
 
-Launch the web application to manage data and generate books:
+### 1. Set up the database (first time only):
+
+```bash
+./setup_database.sh
+```
+
+This interactive script will prompt you for PostgreSQL credentials and set up everything automatically.
+
+### 2. Launch the web application:
 
 ```bash
 ./start.sh

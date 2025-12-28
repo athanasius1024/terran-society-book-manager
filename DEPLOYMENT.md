@@ -68,7 +68,25 @@ pip install -r requirements.txt
 
 ### 4. Set Up PostgreSQL Database
 
-#### Create Database and User:
+#### Option A: Automated Setup (Recommended)
+
+Use the interactive setup script:
+
+```bash
+./setup_database.sh
+```
+
+The script will:
+- Prompt you for PostgreSQL admin credentials
+- Ask for database configuration (name, user, password, schema)
+- Create the database and user
+- Create all tables and schema
+- Populate initial data
+- Save configuration for the application
+
+#### Option B: Manual Setup
+
+##### Create Database and User:
 ```bash
 # Switch to postgres user
 sudo -u postgres psql
@@ -80,13 +98,13 @@ GRANT ALL PRIVILEGES ON DATABASE db_terran_society TO rock;
 \q
 ```
 
-#### Create Schema and Tables:
+##### Create Schema and Tables:
 ```bash
 # Run schema creation script
 PGPASSWORD=your_secure_password_here psql -h localhost -U rock -d db_terran_society -f scripts/pg_schema.sql
 ```
 
-#### Populate Initial Data:
+##### Populate Initial Data:
 ```bash
 # From the application directory
 cd scripts
