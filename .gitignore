@@ -74,3 +74,6 @@ Claude_Prompt*.txt
 Council_of_Elders*.txt
 INSTALL_LATEX.txt
 Global Challenges*
+
+# Data population scripts (organization-specific)
+scripts/populate_*.py

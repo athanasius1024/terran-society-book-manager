@@ -125,28 +125,20 @@ else
 fi
 echo ""
 
-# Step 5: Populate initial data
-echo "🌱 Step 5: Populating initial data..."
-POPULATE_SCRIPT="$(dirname "$0")/scripts/populate_db.py"
-ROLES_SCRIPT="$(dirname "$0")/scripts/populate_roles.py"
+# Step 5: Load sample data
+echo "🌱 Step 5: Loading sample data..."
+SAMPLE_DATA="$(dirname "$0")/scripts/sample_data.sql"
 
-if [ -f "$POPULATE_SCRIPT" ]; then
-    cd "$(dirname "$0")/scripts"
-    # Temporarily set database config for Python scripts
-    export DB_HOST=localhost
-    export DB_NAME="$DB_NAME"
-    export DB_USER="$DB_USER"
-    export DB_PASSWORD="$DB_PASSWORD"
-    
-    python3 populate_db.py
-    echo "✓ Initial data populated"
-    
-    if [ -f "populate_roles.py" ]; then
-        python3 populate_roles.py
-        echo "✓ Roles and duties populated"
+if [ -f "$SAMPLE_DATA" ]; then
+    if [ "$DB_SCHEMA" != "scm_terran_society" ]; then
+        sed "s/scm_terran_society/$DB_SCHEMA/g" "$SAMPLE_DATA" | psql -h localhost -U "$DB_USER" -d "$DB_NAME"
+    else
+        psql -h localhost -U "$DB_USER" -d "$DB_NAME" -f "$SAMPLE_DATA"
     fi
+    echo "✓ Sample data loaded"
+    echo "  (3 tiers, 3 branches, 2 institutions, 3 roles, 4 duties, 1 process)"
 else
-    echo "⚠ Populate scripts not found, skipping initial data"
+    echo "⚠ Sample data file not found, skipping"
 fi
 echo ""
 
