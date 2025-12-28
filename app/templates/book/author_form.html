@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{% if author %}Edit{% else %}New{% endif %} Author - Terran Society{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h1><i class="bi bi-person"></i> {% if author %}Edit{% else %}New{% endif %} Author</h1>
+    </div>
+    <div class="col-md-4 text-end">
+        <a href="{{ url_for('book_metadata') }}" class="btn btn-secondary">
+            <i class="bi bi-x-circle"></i> Cancel
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="POST">
+            <div class="mb-3">
+                <label for="author_name" class="form-label">Author Name *</label>
+                <input type="text" class="form-control" id="author_name" name="author_name" 
+                       value="{% if author %}{{ author.author_name }}{% endif %}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="author_role" class="form-label">Role</label>
+                <input type="text" class="form-control" id="author_role" name="author_role" 
+                       value="{% if author %}{{ author.author_role }}{% endif %}" 
+                       placeholder="e.g., Primary Author, Editor, Contributor">
+            </div>
+            
+            <div class="mb-3">
+                <label for="author_bio" class="form-label">Biography</label>
+                <textarea class="form-control" id="author_bio" name="author_bio" rows="4">{% if author %}{{ author.author_bio }}{% endif %}</textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label for="sort_order" class="form-label" 
+                       data-bs-toggle="tooltip" 
+                       data-bs-placement="top" 
+                       title="Controls the display order of authors. Lower numbers appear first.">
+                    Sort Order
+                </label>
+                <input type="number" class="form-control" id="sort_order" name="sort_order" 
+                       value="{% if author %}{{ author.sort_order }}{% else %}0{% endif %}">
+            </div>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ url_for('book_metadata') }}" class="btn btn-secondary">
+                    <i class="bi bi-x-circle"></i> Cancel
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-circle"></i> {% if author %}Update{% else %}Create{% endif %} Author
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

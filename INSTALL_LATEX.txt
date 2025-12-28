@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════
+QUICK LATEX INSTALLATION - Terran Society Book Project
+═══════════════════════════════════════════════════════════
+
+OPTION 1: Automated (Recommended)
+──────────────────────────────────
+cd /media/infodine/LaCie/z_stash/z-terran/TerranSocietyBook/infobuild
+sudo bash scripts/setup_latex.sh
+
+
+OPTION 2: Manual Installation
+──────────────────────────────
+sudo apt-get update
+sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+
+VERIFY INSTALLATION
+───────────────────
+which xelatex
+xelatex --version
+
+
+TEST PDF CONVERSION
+───────────────────
+cd /media/infodine/LaCie/z_stash/z-terran/TerranSocietyBook/infobuild
+pandoc book/manuscript.md -o book/TerranSocietyBook_test.pdf \
+  --pdf-engine=xelatex --toc --toc-depth=3 \
+  -V geometry:margin=1in -V fontsize=11pt -V documentclass=book
+
+
+WHAT YOU GET
+────────────
+✓ Professional typography and layout
+✓ Print-ready PDF generation
+✓ "Convert to PDF > From MD (XeLaTeX)" option in web interface
+✓ Better control over document formatting
+
+SIZE: ~500MB-1GB
+TIME: 5-15 minutes
+
+═══════════════════════════════════════════════════════════
+For detailed instructions, see: docs/LATEX_SETUP.md
+═══════════════════════════════════════════════════════════

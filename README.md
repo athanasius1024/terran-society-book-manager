@@ -6,10 +6,33 @@ A comprehensive project documenting and organizing information about the Terran 
 
 This project combines documentation, database design, and content creation for the Terran Society initiative. It includes:
 
+- **Web Application**: Flask-based manager for organizational data and book generation
 - **Book Content**: Structured chapters and content for the Terran Society book
 - **Database**: PostgreSQL database schema and management for organizing Terran Society data
 - **Reference Materials**: Supporting documents, presentations, and historical materials
 - **Scripts**: Utilities for database management and content generation
+
+## Web Application
+
+### Quick Start
+
+Launch the web application to manage data and generate books:
+
+```bash
+./start.sh
+```
+
+Then open your browser to: **http://localhost:5000**
+
+### Features
+
+- 📊 **Data Management**: Web interface for managing tiers, branches, institutions, roles, and duties
+- 📖 **Book Generation**: Generate professional PDF and HTML books with one click
+- 🔗 **Glossary Linking**: Automatic hyperlinking of terms in generated books
+- ⚙️ **Database Configuration**: Configure PostgreSQL connection through web interface
+- 🎨 **Modern UI**: Responsive Bootstrap design with intuitive navigation
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for complete installation and deployment instructions.
 
 ## Project Structure
 

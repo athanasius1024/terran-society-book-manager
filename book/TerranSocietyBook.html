@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<meta content="Angelo Patrick Arteman" name="author"/>
+<meta content="2025-12-28" name="dcterms.date"/>
+<title>Terran Society</title>
+<style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>/* HTML Book CSS - optimized for web viewing */
+
+body {
+    font-family: Georgia, serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 4em 0.25in 2em 0.25in;  /* Top padding for fixed header */
+    color: #333;
+    background-color: #fff;
+}
+
+/* Sticky header with TOC link */
+.book-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-header-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.book-header-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+    padding: 0.3em 0.8em;
+    background-color: #34495e;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.book-header-nav a:hover {
+    background-color: #3498db;
+}
+
+/* Floating sidebar navigation */
+.sidebar-nav {
+    position: fixed;
+    left: 1em;
+    top: 5em;
+    width: 200px;
+    max-height: calc(100vh - 6em);
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 0.85em;
+    display: none;  /* Hidden on small screens */
+}
+
+.sidebar-nav h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 0.3em;
+}
+
+.sidebar-nav a {
+    color: #2980b9;
+    text-decoration: none;
+    display: block;
+    padding: 0.2em 0;
+}
+
+.sidebar-nav a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.sidebar-nav a.active {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Show sidebar on larger screens */
+@media (min-width: 1200px) {
+    .sidebar-nav {
+        display: block;
+    }
+    
+    body {
+        margin-left: 250px;
+    }
+}
+
+/* Hide Pandoc title block */
+#title-block-header {
+    display: none;
+}
+
+/* Cover page - centered */
+.cover-page {
+    text-align: center;
+    padding: 4em 0;
+}
+
+.cover-page h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+.cover-page p,
+.cover-page strong {
+    text-align: center;
+    margin-bottom: 0.3em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.cover-page .cover-author,
+.cover-page .cover-date {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+}
+
+/* Author page - centered */
+.author-page {
+    text-align: center;
+    padding: 4em 0;
+}
+
+.author-page p {
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+/* Dedication page - centered */
+.dedication-page {
+    text-align: center;
+    padding: 4em 0;
+}
+
+.dedication-page h2,
+.dedication-page p {
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    color: #34495e;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    color: #555;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+    color: #666;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Table of Contents page wrapper */
+.toc-page {
+    margin: 3em 0;
+    padding: 2em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* TOC title (book title) */
+.toc-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* TOC subtitle (book subtitle/tagline) */
+.toc-subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* TOC heading ("Table of Contents" text) */
+.toc-heading {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Table of Contents - clean hyperlinks */
+#TOC {
+    margin: 0;
+    padding: 0;
+}
+
+#TOC h1 {
+    display: none;  /* Hide Pandoc's auto-generated TOC title */
+}
+
+#TOC ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#TOC li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+#TOC a {
+    text-decoration: none;
+    color: #2980b9;
+    display: inline;  /* Changed from block to inline to prevent dots */
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+#TOC a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+#TOC a:visited {
+    color: #8e44ad;
+}
+
+/* Nested TOC indentation */
+#TOC ul ul {
+    padding-left: 1.5em;
+    margin-top: 0.3em;
+}
+
+#TOC ul ul ul {
+    padding-left: 1.5em;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.3em;
+}
+
+/* Blockquotes */
+blockquote {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-style: italic;
+    border-left: 3px solid #ccc;
+    padding-left: 1em;
+    color: #555;
+}
+
+/* Links - glossary terms */
+a.glossary-term {
+    color: #27ae60;
+    text-decoration: none;
+    border-bottom: 1px dotted #27ae60;
+    cursor: help;
+}
+
+a.glossary-term:hover {
+    color: #229954;
+    border-bottom: 1px solid #229954;
+}
+
+/* Regular links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Code blocks */
+pre, code {
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+
+/* Blank pages - hide in HTML */
+.blank-page {
+    display: none;
+}
+
+/* Glossary section */
+#glossary {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 2px solid #ddd;
+}
+
+/* Print styles */
+@media print {
+    body {
+        max-width: none;
+        margin: 0;
+        padding: 1cm;
+    }
+    
+    #TOC {
+        background-color: transparent;
+        page-break-after: always;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+}
+</style>
+</head>
+<body><div class="book-header"><div class="book-header-title">Terran Society: A New Social Contract</div><div class="book-header-nav"><a href="#TOC">Table of Contents</a></div></div><div class="sidebar-nav"><h4>Navigation</h4><ul><li><a href="#introduction">Introduction</a></li><li><a href="#basic-principles-of-terran-society">Basic Principles of Terran
+Society</a></li><li><a href="#rights-of-the-people">Rights of the People</a></li><li><a href="#organizational-structure-overview">Organizational Structure
+Overview</a></li><li><a href="#district-level-governance">District Level Governance</a></li><li><a href="#regional-executive-branch">Regional Executive Branch</a></li><li><a href="#legislative-branch">Legislative Branch</a></li><li><a href="#judicial-branch">Judicial Branch</a></li><li><a href="#the-fair-witness-branch">The Fair Witness Branch</a></li><li><a href="#world-level-governance">World Level Governance</a></li><li><a href="#processes-and-procedures">Processes and Procedures</a></li><li><a href="#glossary">Glossary</a></li></ul></div>
+<header id="title-block-header">
+<h1 class="title">Terran Society</h1>
+<p class="subtitle">A New Social Contract</p>
+<p class="author">Angelo Patrick Arteman</p>
+<p class="date">2025-12-28</p>
+</header>
+<!-- TOC MOVED -->
+<section class="cover-page" id="terran-society">
+<h1>Terran Society</h1>
+<p><strong>A New Social Contract</strong></p>
+<p><span class="cover-author">Angelo Patrick Arteman</span></p>
+<p><span class="cover-date">2025-12-28</span></p>
+</section>
+<div style="page-break-after: always;">
+</div>
+<div class="author-page">
+<p>Terran Society</p>
+<p>A New Social Contract</p>
+<p>Angelo Patrick Arteman, Primary Author</p>
+<p>© 2025 Terran Society</p>
+</div>
+<div style="page-break-after: always;">
+</div>
+<div class="blank-page">
+</div>
+<section class="dedication-page" id="dedication">
+<h2>Dedication</h2>
+<p>“For this and future generations of Terrans”</p>
+<p>Nothing in the <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> is softer and weaker than water; But, for
+attacking the hard and strong, there is nothing like it! For nothing can
+takes its place. That the weak overcomes the strong, and the soft
+overcomes the hard, That is something known by all, but practiced by
+none. Therefore, the Sage says: To receive the dirt of a country is to
+be the lord of its soil shrines. To bear the calamities of a country is
+to be the prince of the world. Indeed, Truth sounds like its
+opposite!</p>
+<p>Tao Teh Ching #78Translated by John C. H. Wu</p>
+</section>
+<div class="toc-page">
+<h1 class="toc-title">Terran Society</h1>
+<h2 class="toc-subtitle">A New Social Contract</h2>
+<h3 class="toc-heading">Table of Contents</h3>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#terran-society" id="toc-terran-society">Terran
+Society</a></li>
+<li><a href="#dedication" id="toc-dedication">Dedication</a></li>
+<li><a href="#terran-society-a-new-social-contract" id="toc-terran-society-a-new-social-contract">Terran Society: A New
+Social Contract</a>
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a>
+<ul>
+<li><a href="#core-objectives" id="toc-core-objectives">Core
+Objectives</a></li>
+<li><a href="#why-a-new-system" id="toc-why-a-new-system">Why a New
+System?</a></li>
+<li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book">How to
+Use This Book</a></li>
+</ul></li>
+<li><a href="#basic-principles-of-terran-society" id="toc-basic-principles-of-terran-society">Basic Principles of Terran
+Society</a>
+<ul>
+<li><a href="#principle-1-operations-transparency" id="toc-principle-1-operations-transparency">Principle 1: Operations
+Transparency</a></li>
+<li><a href="#principle-2-member-centric-design" id="toc-principle-2-member-centric-design">Principle 2: Member-Centric
+Design</a></li>
+<li><a href="#principle-3-environmental-stewardship" id="toc-principle-3-environmental-stewardship">Principle 3:
+Environmental Stewardship</a></li>
+<li><a href="#principle-4-equal-regional-treatment" id="toc-principle-4-equal-regional-treatment">Principle 4: Equal
+Regional Treatment</a></li>
+<li><a href="#principle-5-sustainable-infrastructure" id="toc-principle-5-sustainable-infrastructure">Principle 5: Sustainable
+Infrastructure</a></li>
+<li><a href="#principle-6-regional-self-sufficiency" id="toc-principle-6-regional-self-sufficiency">Principle 6: Regional
+Self-Sufficiency</a></li>
+<li><a href="#principle-7-single-branch-service" id="toc-principle-7-single-branch-service">Principle 7: Single Branch
+Service</a></li>
+<li><a href="#principle-8-inviolable-voting-rights" id="toc-principle-8-inviolable-voting-rights">Principle 8: Inviolable
+Voting Rights</a></li>
+</ul></li>
+<li><a href="#rights-of-the-people" id="toc-rights-of-the-people">Rights
+of the People</a>
+<ul>
+<li><a href="#foundational-statement" id="toc-foundational-statement">Foundational Statement</a></li>
+<li><a href="#the-rights" id="toc-the-rights">The Rights</a></li>
+</ul></li>
+<li><a href="#organizational-structure-overview" id="toc-organizational-structure-overview">Organizational Structure
+Overview</a>
+<ul>
+<li><a href="#organizational-hierarchy" id="toc-organizational-hierarchy">Organizational Hierarchy</a></li>
+<li><a href="#the-three-tiers" id="toc-the-three-tiers">The Three
+Tiers</a></li>
+<li><a href="#the-branches" id="toc-the-branches">The Branches</a></li>
+</ul></li>
+<li><a href="#district-level-governance" id="toc-district-level-governance">District Level Governance</a>
+<ul>
+<li><a href="#council-of-elders" id="toc-council-of-elders">Council of
+Elders</a></li>
+<li><a href="#district-representative" id="toc-district-representative">District Representative</a></li>
+<li><a href="#district-elections" id="toc-district-elections">District
+Elections</a></li>
+</ul></li>
+<li><a href="#regional-executive-branch" id="toc-regional-executive-branch">Regional Executive Branch</a>
+<ul>
+<li><a href="#office-of-regional-administrator" id="toc-office-of-regional-administrator">Office of Regional
+Administrator</a></li>
+<li><a href="#office-of-regional-treasurer" id="toc-office-of-regional-treasurer">Office of Regional
+Treasurer</a></li>
+<li><a href="#office-of-regional-sheriff" id="toc-office-of-regional-sheriff">Office of Regional Sheriff</a></li>
+<li><a href="#office-of-regional-environmental-guardian" id="toc-office-of-regional-environmental-guardian">Office of Regional
+Environmental Guardian</a></li>
+<li><a href="#office-of-regional-ambassador" id="toc-office-of-regional-ambassador">Office of Regional
+Ambassador</a></li>
+<li><a href="#executive-council-coordination" id="toc-executive-council-coordination">Executive Council
+Coordination</a></li>
+</ul></li>
+<li><a href="#legislative-branch" id="toc-legislative-branch">Legislative Branch</a>
+<ul>
+<li><a href="#regional-council-of-the-people" id="toc-regional-council-of-the-people">Regional Council of the
+People</a></li>
+</ul></li>
+<li><a href="#judicial-branch" id="toc-judicial-branch">Judicial
+Branch</a>
+<ul>
+<li><a href="#office-of-guarantor-of-rights" id="toc-office-of-guarantor-of-rights">Office of Guarantor of
+Rights</a></li>
+<li><a href="#office-of-facilitator-of-the-court" id="toc-office-of-facilitator-of-the-court">Office of Facilitator of the
+Court</a></li>
+<li><a href="#office-of-public-arbitrator" id="toc-office-of-public-arbitrator">Office of Public
+Arbitrator</a></li>
+<li><a href="#court-structure" id="toc-court-structure">Court
+Structure</a></li>
+</ul></li>
+<li><a href="#the-fair-witness-branch" id="toc-the-fair-witness-branch">The Fair Witness Branch</a>
+<ul>
+<li><a href="#purpose-and-independence" id="toc-purpose-and-independence">Purpose and Independence</a></li>
+<li><a href="#training-hierarchy" id="toc-training-hierarchy">Training
+Hierarchy</a></li>
+<li><a href="#fair-witness-panels" id="toc-fair-witness-panels">Fair
+Witness Panels</a></li>
+<li><a href="#fair-witness-responsibilities" id="toc-fair-witness-responsibilities">Fair Witness
+Responsibilities</a></li>
+<li><a href="#accountability-and-recall" id="toc-accountability-and-recall">Accountability and Recall</a></li>
+</ul></li>
+<li><a href="#world-level-governance" id="toc-world-level-governance">World Level Governance</a>
+<ul>
+<li><a href="#world-executive-branch" id="toc-world-executive-branch">World Executive Branch</a></li>
+<li><a href="#world-legislative-branch" id="toc-world-legislative-branch">World Legislative Branch</a></li>
+<li><a href="#world-judicial-system" id="toc-world-judicial-system">World Judicial System</a></li>
+<li><a href="#world-fair-witness-branch" id="toc-world-fair-witness-branch">World Fair Witness Branch</a></li>
+<li><a href="#military-branch" id="toc-military-branch">Military
+Branch</a></li>
+</ul></li>
+<li><a href="#processes-and-procedures" id="toc-processes-and-procedures">Processes and Procedures</a>
+<ul>
+<li><a href="#election-processes" id="toc-election-processes">Election
+Processes</a></li>
+<li><a href="#judicial-processes" id="toc-judicial-processes">Judicial
+Processes</a></li>
+<li><a href="#fair-witness-processes" id="toc-fair-witness-processes">Fair Witness Processes</a></li>
+<li><a href="#election-processes-1" id="toc-election-processes-1">Election Processes</a></li>
+<li><a href="#fair-witness-processes-1" id="toc-fair-witness-processes-1">Fair Witness Processes</a></li>
+</ul></li>
+<li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+</ul></li>
+</ul>
+</nav></div>
+<div style="page-break-after: always;">
+</div>
+<h1 id="terran-society-a-new-social-contract">Terran Society: A New
+Social Contract</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Terran Society represents a comprehensive framework for human
+governance designed to protect individual rights, ensure accountability,
+and create sustainable prosperity. Unlike traditional systems of
+governance that concentrate power, Terran Society distributes authority
+across multiple tiers and branches with built-in checks and
+balances.</p>
+<p>The foundation of this system rests on two pillars: the Rights of the
+People and the Basic Principles. These establish the core values that
+guide every aspect of Terran Society’s operations. From these
+foundations emerges an organizational structure spanning three
+tiers—<a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a>, Region, and World—each with specific responsibilities
+and limitations.</p>
+<h3 id="core-objectives">Core Objectives</h3>
+<p>Terran Society exists to:</p>
+<ol type="1">
+<li><strong>Protect the Rights of the People</strong> – Every member’s
+fundamental rights are guaranteed and actively defended</li>
+<li><strong>Meet Basic Needs</strong> – Ensure all members have access
+to clean food, water, air, shelter, safety, privacy, information,
+travel, and healthcare</li>
+<li><strong>Provide Just Governance</strong> – Create transparent,
+accountable systems for collective decision-making</li>
+<li><strong>Enable Peaceful Resolution</strong> – Establish fair
+processes for resolving disputes without violence</li>
+<li><strong>Ensure Common Defense</strong> – Protect the society and its
+members from external threats</li>
+<li><strong>Foster Sustainability</strong> – Build systems that can
+endure for generations while respecting the natural <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a></li>
+</ol>
+<h3 id="why-a-new-system">Why a New System?</h3>
+<p>Current governance systems worldwide share common flaws: concentrated
+power, lack of transparency, erosion of individual rights, and
+structures that serve special interests rather than the people. Terran
+Society addresses these systemic problems through:</p>
+<ul>
+<li><strong>Decentralization</strong> – Power is distributed across
+regions and branches, preventing dangerous concentrations</li>
+<li><strong>Transparency</strong> – The <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> branch ensures all
+Society operations are recorded and public</li>
+<li><strong>Direct Accountability</strong> – Most major positions are
+directly elected by the people they serve</li>
+<li><strong>Rights-First Approach</strong> – The Rights of the People
+cannot be legislated away</li>
+<li><strong>Practical Scale</strong> – Regions are sized for responsive
+governance (maximum 20-25 million people)</li>
+</ul>
+<h3 id="how-to-use-this-book">How to Use This Book</h3>
+<p>This book provides a comprehensive guide to Terran Society’s
+structure and operations. It is organized to build understanding
+progressively:</p>
+<ul>
+<li><strong>Basic Principles</strong> – The fundamental values guiding
+all operations</li>
+<li><strong>Rights of the People</strong> – The complete enumeration of
+protected rights</li>
+<li><strong>Organizational Structure</strong> – Detailed explanation of
+each tier and <a class="glossary-term" href="#glossary-branch" title="See glossary: branch">branch</a></li>
+<li><strong>Roles and Responsibilities</strong> – Clear definitions of
+every position and duty</li>
+<li><strong>Processes and Procedures</strong> – How elections,
+legislation, courts, and other systems operate</li>
+</ul>
+<p>Throughout this book, terms appearing in the Glossary are capitalized
+when referring to specific offices or institutions (e.g.,
+“Administrator” for the office, “administrator” for the general
+concept).</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="basic-principles-of-terran-society">Basic Principles of Terran
+Society</h2>
+<p>These eight principles guide all operations and decisions within
+Terran Society. They serve as a philosophical foundation ensuring that
+systems remain focused on member welfare, transparency, and
+sustainability.</p>
+<h3 id="principle-1-operations-transparency">Principle 1: Operations
+Transparency</h3>
+<p>Terran Society operations need to be open, transparent and accessible
+to all members as the base of power is the informed individual.</p>
+<p>This principle recognizes that an informed citizenry is the only
+reliable check on power. All meetings of governing bodies must be
+observed by Fair Witnesses, and records must be freely accessible.
+Secret legislation or hidden agendas cannot exist in this system.</p>
+<h3 id="principle-2-member-centric-design">Principle 2: Member-Centric
+Design</h3>
+<p>Terran Society services and systems must be designed, developed and
+administered for the benefit of all members.</p>
+<p>Society management exists to serve the people, not the other way
+around. Every system, service, and structure must be evaluated based on
+whether it benefits all members. Policies that advantage one group at
+the expense of others violate this principle.</p>
+<h3 id="principle-3-environmental-stewardship">Principle 3:
+Environmental Stewardship</h3>
+<p>We are caretakers in this wonderful <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> shared with many other
+beings, pollution of air, water and land is to be avoided and cleaned
+up.</p>
+<p>Humans are part of a larger ecological community. Our survival
+depends on clean air, water, and soil. This principle establishes
+environmental protection not as an optional add-on, but as a core
+requirement. The Environmental Guardian role exists at both Regional and
+<a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> levels to enforce this principle.</p>
+<h3 id="principle-4-equal-regional-treatment">Principle 4: Equal
+Regional Treatment</h3>
+<p>Services provided to Regions must be administered equally per
+<a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a>.</p>
+<p>No <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a> should receive preferential treatment in the allocation of
+resources or services. This ensures fairness and prevents regional
+rivalry. World-level services are distributed equally per Region
+regardless of population, wealth, or political influence.</p>
+<h3 id="principle-5-sustainable-infrastructure">Principle 5: Sustainable
+Infrastructure</h3>
+<p>Permanent structures &amp; facilities shall be designed to last for
+future generations, have minimal maintenance and be as energy
+independent and efficient as is practical.</p>
+<p>Short-term thinking creates long-term problems. Terran Society
+requires that infrastructure be built to last generations, minimizing
+the burden on future members. This principle encourages renewable
+energy, durable materials, and efficient design.</p>
+<h3 id="principle-6-regional-self-sufficiency">Principle 6: Regional
+Self-Sufficiency</h3>
+<p>Each community and <a class="glossary-term" href="#glossary-region" title="See glossary: region">region</a> should be self-sufficient in a sustainable
+way for meeting their basic needs.</p>
+<p>Resilience comes from local self-sufficiency. While trade and
+cooperation between Regions are encouraged, each <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a> should be
+capable of meeting its own basic needs. This prevents cascading failures
+and reduces vulnerability to disruption.</p>
+<h3 id="principle-7-single-branch-service">Principle 7: Single Branch
+Service</h3>
+<p>A Person may be on the staff of only one branch of World, Regional or
+<a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> management or the Defense Force at a time.</p>
+<p>To prevent conflicts of interest and ensure focused service,
+individuals cannot simultaneously serve in multiple branches or tiers.
+This also distributes leadership opportunities across more people.</p>
+<h3 id="principle-8-inviolable-voting-rights">Principle 8: Inviolable
+Voting Rights</h3>
+<p>Voting rights and benefits cannot be revoked as punishment or
+penalty.</p>
+<p>Voting rights and membership benefits are fundamental and cannot be
+revoked as punishment. Even those convicted of crimes retain their voice
+in society. This prevents the creation of a permanent underclass and
+ensures that everyone maintains a stake in the system.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="rights-of-the-people">Rights of the People</h2>
+<p>These 31 rights form the cornerstone of Terran Society. They are
+in-alienable, meaning they cannot be legislated away, suspended, or
+revoked. Every law, every Society action, and every institution must
+respect these rights.</p>
+<h3 id="foundational-statement">Foundational Statement</h3>
+<p>We are endowed by our Creator with certain in-alienable Rights, among
+these are Life, Liberty and the Pursuit of Happiness. These Rights are
+not to be violated by institutions, organizations or individuals. Our
+duty is to protect these Rights.</p>
+<h3 id="the-rights">The Rights</h3>
+<h4 id="right-01">Right 01</h4>
+<p>Each Person is a unique individual, therefore all People have a Right
+to their own beliefs, thoughts emotions and the free expression thereof
+through speech, song, writing or other art of self expression, including
+in the Public Space. However, a Person can be held accountable if their
+speech or self expression directly causes physical harm or violates the
+Rights of another person.</p>
+<h4 id="right-02">Right 02</h4>
+<p>Life begins at conception.</p>
+<h4 id="right-03">Right 03</h4>
+<p>People retain the Right to their body and therefore control of the
+consumption and use of foods and medicines. Forced medication,
+implantation, injection, medical procedure, poison or related harm is
+prohibited. Children may not be sexually mutilated or be given gender
+modification drugs or related surgery.</p>
+<h4 id="right-04">Right 04</h4>
+<p>People have the Right to adorn, dress and present themselves as they
+choose in that clothing attire may not be mandated or prohibited by law.
+Private establishment dress codes and designated uniforms are voluntary
+by use and membership.</p>
+<h4 id="right-05">Right 05</h4>
+<p>As Humans, we have a symbiotic relationship with the cannabis plant,
+the only known plant which by itself can sustain Human life and
+civilization. People have the right to possess, grow, use and have
+access to cannabis.</p>
+<h4 id="right-06">Right 06</h4>
+<p>As Humans we share a relationship with all life of which our
+Biosphere is composed and have a natural right to responsibly use,
+cultivate and/or farm animals, plants, fungi, algae and such.</p>
+<h4 id="right-07">Right 07</h4>
+<p>People have the Right to be free of harmful substances added to food,
+water, air and soil including toxic herbicides, pesticides and chemical
+fertilizers and food additives.</p>
+<h4 id="right-08">Right 08</h4>
+<p>People have the Right to a healthy and safe living, working and
+playing environment as is practical. But they may choose to take risks
+upon themselves or participate in activities which can never be totally
+free of danger or potential harm.</p>
+<h4 id="right-09">Right 09</h4>
+<p>People have the Right to peaceably assemble.</p>
+<h4 id="right-10">Right 10</h4>
+<p>People have a Right to access and/or use Public Space without fee and
+managed use must be by a fair and open system.</p>
+<h4 id="right-11">Right 11</h4>
+<p>People have the Right to Travel as is practical. Public roads and
+public forms of transportation must be available to all.</p>
+<h4 id="right-12">Right 12</h4>
+<p>People have the right to be secure in their person, home, papers,
+thoughts, digital media, effects and private communications, against
+unreasonable search and/or seizure.</p>
+<h4 id="right-13">Right 13</h4>
+<p>People have a Right to self defense and to defend others if
+necessary. Therefore People have the right to keep and bear arms and
+learn martial arts. This is does not include the use of excessive force.
+Weapons of mass destruction, need to be under secure military
+control.</p>
+<h4 id="right-14">Right 14</h4>
+<p>People have the right to be quiet and to not accuse themselves.
+Forced confession and attempted forced confession is forbidden.</p>
+<h4 id="right-15">Right 15</h4>
+<p>A Person shall be free from double jeopardy. There shall not be a
+hearing held twice for the same offense. A momentary single act cannot
+result in multiple criminal charges.</p>
+<h4 id="right-16">Right 16</h4>
+<p>A Person may be accused and brought to trial only for acts which have
+violated the Rights of another Person, an actual injured party.</p>
+<h4 id="right-17">Right 17</h4>
+<p>A mother and father will have joint custody of their children, even
+in a separation, unless they agree to another arrangement between
+themselves or through a mediator.</p>
+<h4 id="right-18">Right 18</h4>
+<p>People are not property. Involuntary servitude, including taxation of
+an individual’s labor or services rendered is prohibited.</p>
+<h4 id="right-19">Right 19</h4>
+<p>Chromosomes, genes and genetically engineered life forms are not
+private intellectual property and may not be patented.</p>
+<h4 id="right-20">Right 20</h4>
+<p>A legally defined organization of people is not a person and cannot
+have legal standing as an actual person.</p>
+<h4 id="right-21">Right 21</h4>
+<p>People have the Right to contract freely with others as long as the
+enforcement of that contract or agreement does not result in harm to the
+individual. People also have the Right to terminate their consent to a
+contract or agreement.</p>
+<h4 id="right-22">Right 22</h4>
+<p>People have the Right to know the organizational structure, roles and
+responsibilities of any organization they are a member of, employed by
+or work for.</p>
+<h4 id="right-23">Right 23</h4>
+<p>People have the right to data and information collected or stored
+about themselves by any person, group or organization. This includes the
+right to review, challenge, and amend such information.</p>
+<h4 id="right-24">Right 24</h4>
+<p>No group or organization may be granted powers which result in the
+violation of the Rights of the People.</p>
+<h4 id="right-25">Right 25</h4>
+<p>If any Person shall accept, claim, receive, or retain any title of
+nobility or honor, or accept and retain any present, pension, office, or
+emolument, from any emperor, king, prince, or foreign power, such person
+shall be ineligible to hold any office of public trust within Terran
+Society to avoid conflict of loyalty.</p>
+<h4 id="right-26">Right 26</h4>
+<p>No single law created by any elected legislature can be too long or
+complex. If it takes more than 20 minutes for a person of average
+reading ability to read and/or is not in clear, understandable language,
+that law is null and void.</p>
+<h4 id="right-27">Right 27</h4>
+<p>Any person elected or appointed to office who violates this Bill of
+Rights is subject to recall and a new election held for their office or
+legislative seat as soon as is practical.</p>
+<h4 id="right-28">Right 28</h4>
+<p>Truthful authorship of any pending law or treaty has to be made
+public before any binding vote for approval can take place.</p>
+<h4 id="right-29">Right 29</h4>
+<p>No law or treaty can be valid which has not been made public and read
+aloud in the legislature with a quorum present, at least three times.
+These readings must be spaced apart in time at least one day, before
+being voted on for approval.</p>
+<h4 id="right-30">Right 30</h4>
+<p>No treaty or binding agreement with an outside party may be made
+which violates these Rights.</p>
+<h4 id="right-31">Right 31</h4>
+<p>This defining of certain rights, shall not be construed to deny or
+disparage others retained by the People.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="organizational-structure-overview">Organizational Structure
+Overview</h2>
+<p>Terran Society is organized into three tiers, each with specific
+roles and responsibilities. At the Regional and <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> levels, these
+tiers are further divided into branches that provide checks and balances
+on each other.</p>
+<h3 id="organizational-hierarchy">Organizational Hierarchy</h3>
+<p>The structure operates on clear hierarchical principles:</p>
+<p><strong><a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> Level:</strong> - <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a> (7-9 members) -
+District Representative (to Regional Council)</p>
+<p><strong>Regional Level:</strong> - <strong>Executive <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>:
+Five offices, each headed by an elected official with subordinate staff
+- <a class="glossary-term" href="#glossary-office-of-regional-administrator" title="See glossary: Office of Regional Administrator">Office of Regional Administrator</a> (with Deputy, Directors of
+Elections/Infrastructure/Public Services) - Office of Regional Treasurer
+(with Deputy, Directors of Budget/Audits) - Office of Regional Sheriff
+(with Deputy Sheriff, Marshal, Chief Investigator) - Office of Regional
+Environmental Guardian (with Deputy, Directors of
+Monitoring/Restoration) - Office of Regional Ambassador (with Deputy,
+Economic Development Director, Consular Officer) - <strong>Legislative
+<a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: <a class="glossary-term" href="#glossary-regional-council-of-the-people" title="See glossary: Regional Council of the People">Regional Council of the People</a> (one Representative per
+District) - <strong>Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Three offices - Office of
+Guarantor of Rights (with Rights Investigator) - Office of Facilitator
+of the Court (with Court Administrator) - <a class="glossary-term" href="#glossary-office-of-public-arbitrator" title="See glossary: Office of Public Arbitrator">Office of Public Arbitrator</a> -
+<strong><a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Branch</strong>: <a class="glossary-term" href="#glossary-regional-fair-witness-council" title="See glossary: Regional Fair Witness Council">Regional Fair Witness Council</a></p>
+<p><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Level:</strong> - <strong>Executive <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>:
+<a class="glossary-term" href="#glossary-world-executive-council" title="See glossary: World Executive Council">World Executive Council</a> plus five offices (Administrator, Treasurer,
+Ambassador, Sheriff, Environmental Guardian) - <strong>Legislative
+<a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Council of the Regions (Regional representation) and
+<a class="glossary-term" href="#glossary-world-council-of-the-people" title="See glossary: World Council of the People">World Council of the People</a> - <strong>Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>
+Court (handles inter-Regional disputes) - <strong><a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a>
+Branch</strong>: <a class="glossary-term" href="#glossary-world-fair-witness-council" title="See glossary: World Fair Witness Council">World Fair Witness Council</a> - <strong>Military
+<a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: World Defense Force, <a class="glossary-term" href="#glossary-defense-force-intelligence" title="See glossary: Defense Force Intelligence">Defense Force Intelligence</a>,
+Defense Force Council</p>
+<h3 id="the-three-tiers">The Three Tiers</h3>
+<h4 id="district">District</h4>
+<p>The District is the most local tier of Terran Society, composed of a
+<a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a> and a Representative to the Regional Legislature.
+Districts typically range from 5,000 to 21,000 people, providing a
+human-scale community where residents are likely to personally know at
+least one Elder.</p>
+<h4 id="region">Region</h4>
+<p>The Region is the primary governance tier, with full executive,
+legislative, judicial, and <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> branches. Regional boundaries
+are set to not exceed 20-25 million people, ensuring responsive and
+accountable governance. Each Region manages its own public services,
+resources, and administration.</p>
+<h4 id="world">World</h4>
+<p>The World tier provides planetary-level coordination for matters that
+cross regional boundaries, including defense, inter-regional commerce,
+environmental standards, and the <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> system. It ensures equal
+treatment of all Regions and coordination of world-wide challenges.</p>
+<h3 id="the-branches">The Branches</h3>
+<p>At the Regional and <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> levels, governance is organized into
+distinct branches, each with different responsibilities:</p>
+<p><strong>Executive <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Administers daily operations,
+public services, and implementation of legislation</p>
+<p><strong>Legislative <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Creates laws, approves budgets,
+and provides oversight of other branches</p>
+<p><strong>Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Provides dispute resolution, rights
+protection, and justice through courts</p>
+<p><strong><a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Branch</strong>: Independent record-keeping,
+observation, and transparency oversight</p>
+<p><strong>Military <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a></strong>: Planetary defense and intelligence
+gathering under civilian oversight</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="district-level-governance">District Level Governance</h2>
+<p>The <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> is the most local tier of Terran Society, designed to be
+small enough that residents personally know at least one Elder.
+Districts typically range from 5,000 to 21,000 people.</p>
+<h3 id="council-of-elders">Council of Elders</h3>
+<p>The <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a> serves as the primary governance body at the
+District level. Its focus is on community cohesion, family welfare, and
+peaceful dispute resolution.</p>
+<h4 id="composition">Composition</h4>
+<ul>
+<li>Seven to nine elected Elders, depending on <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> population</li>
+<li>Three-year terms with staggered elections (one-third up for election
+each year)</li>
+<li>No term limits</li>
+<li>Candidates must demonstrate compassion and love for children</li>
+<li>Preferably at least 55 years of age</li>
+</ul>
+<h4 id="responsibilities">Responsibilities</h4>
+<p><strong>Conflict Resolution</strong>: Peacefully resolve disputes
+between <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> members before escalation to Sheriff or Courts</p>
+<p><strong>Family Support</strong>: Provide counsel and guidance to
+families in need, help restore family unity in crisis situations</p>
+<p><strong>Child Welfare</strong>: Maintain safe haven for children in
+distress, oversee care of orphans and adoption process</p>
+<p><strong>Community Assistance</strong>: Help people who are struggling
+to adapt to Terran Society or access benefits and services</p>
+<p><strong>Youth Guidance</strong>: Address juvenile misbehavior through
+mentorship before involvement of authorities</p>
+<p><strong>Community Liaison</strong>: Maintain good information flow to
+residents about <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> matters and Regional issues</p>
+<p><strong>Social Cohesion</strong>: Facilitate simple social events
+that encourage neighbors to know one another</p>
+<h4 id="safe-haven">Safe Haven</h4>
+<p>Each <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a> maintains a safe haven—a secure location where
+children or family members in crisis can temporarily stay. This provides
+immediate protection while the Council works to resolve the underlying
+issues and restore the family unit.</p>
+<h4 id="limitations">Limitations</h4>
+<p>The <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a>: - Cannot tax or charge service fees (funded
+through Regional budget allocation) - Cannot compel anyone to appear or
+enforce decisions (unresolved issues escalate to Sheriff or Courts) -
+Serves a voluntary mediation role—parties must agree to Council
+involvement</p>
+<h3 id="district-representative">District Representative</h3>
+<p>Each District elects one <a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> to the Regional Council of
+the People. This provides direct representation in Regional legislation
+and ensures District concerns are heard at the Regional level.</p>
+<h3 id="district-elections">District Elections</h3>
+<p><a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> elections occur on a three-year cycle. The Administrator’s
+Department manages the election process, ensuring:</p>
+<ul>
+<li>Transparent candidate disclosure</li>
+<li>Public forums for debate and questions</li>
+<li>Physical ballots verified by voters</li>
+<li>Ballots counted publicly and retained for 10 years</li>
+<li>No party affiliation required</li>
+<li>No money in campaigns</li>
+</ul>
+<div style="page-break-before: always;">
+</div>
+<h2 id="regional-executive-branch">Regional Executive Branch</h2>
+<p>The Regional Executive <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a> administers daily operations, public
+services, and implementation of legislation. It consists of five major
+offices, each headed by an elected official with supporting staff.</p>
+<h3 id="office-of-regional-administrator">Office of Regional
+Administrator</h3>
+<p>Manages Regional operations, facilities, staffing, elections, and
+public service infrastructure</p>
+<h4 id="regional-administrator">Regional Administrator</h4>
+<p>Chief administrative officer managing Regional operations and
+infrastructure</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li><strong>Government Operations</strong>: Administer regional
+government buildings, facilities, operations and related staffing</li>
+<li><strong>Election Administration</strong>: Ensure clean, well-managed
+election process with public forum for candidate debate</li>
+<li><strong>Equitable Services</strong>: Ensure equitable distribution
+of benefits and services across all Districts</li>
+<li><strong>Infrastructure Management</strong>: Oversee communications,
+networking, and infrastructure services and systems</li>
+<li><strong>Public Service Cooperatives</strong>: Facilitate creation of
+Public Service Cooperatives for utilities, ports, transit, etc.</li>
+<li><strong>Medical Facilities</strong>: Assure proper medical
+facilities and resources are available throughout the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+<li><strong>Fire Services</strong>: Maintain Fire Stations and conduct
+fire safety inspections and enforcement</li>
+<li><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a> Templates</strong>: Prepare organizational
+templates for cooperatives for legislative approval</li>
+<li><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a> Assistance</strong>: Assist people and
+organizations in applying for and launching approved cooperatives</li>
+</ul>
+<p><strong>Subordinate Roles:</strong></p>
+<ul>
+<li><strong><a class="glossary-term" href="#glossary-deputy-administrator" title="See glossary: Deputy Administrator">Deputy Administrator</a></strong>: Assists Administrator and may
+act in their absence</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-elections" title="See glossary: Director of Elections">Director of Elections</a></strong>: Manages clean, transparent
+election process including public forums for debate</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-infrastructure" title="See glossary: Director of Infrastructure">Director of Infrastructure</a></strong>: Oversees
+communications, networking, and infrastructure systems</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-public-services" title="See glossary: Director of Public Services">Director of Public Services</a></strong>: Coordinates creation
+and oversight of Public Service Cooperatives</li>
+</ul>
+<h3 id="office-of-regional-treasurer">Office of Regional Treasurer</h3>
+<p>Manages regional budget, taxation, benefits accounts, audits, and
+financial oversight</p>
+<h4 id="regional-treasurer">Regional Treasurer</h4>
+<p>Chief financial officer managing regional budget, taxation, and
+financial oversight</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li><strong>Budget Preparation</strong>: Prepare budget proposals for
+legislative approval on 1, 2, or 3 year cycles</li>
+<li><strong>Benefits Accounts</strong>: Maintain a benefits account for
+each person residing in the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+<li><strong>Tax Administration</strong>: Administer taxation and
+collection as defined by legislation</li>
+<li><strong>Regional Bank Oversight</strong>: Appoint five-member Board
+of Directors of Regional Bank, subject to legislative approval</li>
+<li><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a> Financial Support</strong>: Assist in
+conversion/creation of cooperatives from the financial perspective</li>
+<li><strong>Audit Authority</strong>: Authority and duty to audit
+regional management, registered businesses, and cooperatives</li>
+<li><strong>Forensic Investigation</strong>: Conduct forensic audit as
+part of criminal investigation when required</li>
+</ul>
+<p><strong>Subordinate Roles:</strong></p>
+<ul>
+<li><strong><a class="glossary-term" href="#glossary-deputy-treasurer" title="See glossary: Deputy Treasurer">Deputy Treasurer</a></strong>: Assists Treasurer and manages
+specific financial departments</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-budget" title="See glossary: Director of Budget">Director of Budget</a></strong>: Prepares budget proposals and
+monitors budget execution</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-audits" title="See glossary: Director of Audits">Director of Audits</a></strong>: Conducts audits of regional
+management, businesses, and cooperatives</li>
+</ul>
+<h3 id="office-of-regional-sheriff">Office of Regional Sheriff</h3>
+<p>Protects Rights of the People, conducts investigations, maintains
+public safety, and emergency response</p>
+<h4 id="regional-sheriff">Regional Sheriff</h4>
+<p>Chief law enforcement officer responsible for protecting Rights of
+the People</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li><strong>Rights Protection</strong>: Responsible for protecting the
+Rights of the People as primary duty</li>
+<li><strong>Physical Fitness</strong>: Ensure officers are physically
+fit, trained in self-defense and safe non-lethal subduing
+techniques</li>
+<li><strong>Criminal Investigation</strong>: Conduct criminal
+investigations and maintain forensic laboratory capabilities</li>
+<li><strong>Emergency Response</strong>: Maintain accessibility and
+ability to respond to emergency calls of all types including rescue</li>
+<li><strong>Inter-Regional Coordination</strong>: Coordinate with <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>
+Sheriff on matters involving inter-regional crime</li>
+<li><strong>Whistleblower Protection</strong>: Provide protection to
+members who report official misconduct or serious crime</li>
+</ul>
+<p><strong>Subordinate Roles:</strong></p>
+<ul>
+<li><strong><a class="glossary-term" href="#glossary-deputy-sheriff" title="See glossary: Deputy Sheriff">Deputy Sheriff</a></strong>: Senior law enforcement officer
+assisting Sheriff in operations</li>
+<li><strong><a class="glossary-term" href="#glossary-marshal" title="See glossary: Marshal">Marshal</a></strong>: Field law enforcement officer trained in
+non-lethal force and investigation</li>
+<li><strong><a class="glossary-term" href="#glossary-chief-investigator" title="See glossary: Chief Investigator">Chief Investigator</a></strong>: Leads criminal investigations
+and forensic laboratory operations</li>
+</ul>
+<h3 id="office-of-regional-environmental-guardian">Office of Regional
+Environmental Guardian</h3>
+<p>Environmental protection, pollution monitoring, ecosystem
+restoration, and enforcement of environmental standards</p>
+<h4 id="regional-environmental-guardian">Regional Environmental
+Guardian</h4>
+<p>Chief environmental officer for regional environmental protection and
+restoration</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li><strong>Environmental Protection</strong>: Conduct regional
+environmental protection and ecosystem restoration operations</li>
+<li><strong>Pollution Testing</strong>: Pro-actively test for pollution
+and environmental damage</li>
+<li><strong>Data Consolidation</strong>: Consolidate environmental
+monitoring data and report to <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Environmental Guardian</li>
+<li><strong>Methods Development</strong>: Develop and evaluate
+environmental protection techniques, methods, and technology</li>
+<li><strong>Waste Management</strong>: Ensure toxic industrial
+byproducts are rendered stable before release to environment</li>
+<li><strong>Resource Standards</strong>: Ensure natural resource
+extraction conforms to respectful, legislatively-determined
+standards</li>
+<li><strong>Complaint Investigation</strong>: Receive and investigate
+environmental concern reports from members</li>
+<li><strong>Remediation Planning</strong>: Determine plans for
+environmental repair and restoration, then implement them</li>
+<li><strong>Resource Coordination</strong>: First point of dispute
+resolution and coordination regarding resources within <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+<li><strong>Technical Assistance</strong>: Provide information and
+technical assistance to organizations with environmental impact</li>
+<li><strong>Standards Proposal</strong>: Propose environmental and
+health safety standards to the Council of the People</li>
+</ul>
+<p><strong>Subordinate Roles:</strong></p>
+<ul>
+<li><strong><a class="glossary-term" href="#glossary-deputy-environmental-guardian" title="See glossary: Deputy Environmental Guardian">Deputy Environmental Guardian</a></strong>: Assists
+Environmental Guardian in environmental operations</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-environmental-monitoring" title="See glossary: Director of Environmental Monitoring">Director of Environmental Monitoring</a></strong>: Oversees
+pollution testing and environmental damage assessment</li>
+<li><strong><a class="glossary-term" href="#glossary-director-of-restoration" title="See glossary: Director of Restoration">Director of Restoration</a></strong>: Plans and implements
+ecosystem restoration projects</li>
+</ul>
+<h3 id="office-of-regional-ambassador">Office of Regional
+Ambassador</h3>
+<p>Promotes commerce, tourism, economic development, and assists
+regional members traveling in other Regions</p>
+<h4 id="regional-ambassador">Regional Ambassador</h4>
+<p>Chief diplomatic officer promoting commerce, tourism, and regional
+interests</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li><strong>Commerce Promotion</strong>: Promote commerce, tourism, and
+other economic development</li>
+<li><strong>Traveler Assistance</strong>: Assist travelers in far away
+Regions and help residents vote when away from home</li>
+<li><strong>Regional Image</strong>: Promote a positive and unifying
+image of the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+<li><strong>Inter-Regional Trade</strong>: Promote economic development
+and inter-regional trade opportunities</li>
+</ul>
+<p><strong>Subordinate Roles:</strong></p>
+<ul>
+<li><strong><a class="glossary-term" href="#glossary-deputy-ambassador" title="See glossary: Deputy Ambassador">Deputy Ambassador</a></strong>: Assists Ambassador in diplomatic
+and economic development functions</li>
+<li><strong><a class="glossary-term" href="#glossary-economic-development-director" title="See glossary: Economic Development Director">Economic Development Director</a></strong>: Promotes commerce,
+trade, and economic opportunities for the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+<li><strong><a class="glossary-term" href="#glossary-consular-officer" title="See glossary: Consular Officer">Consular Officer</a></strong>: Assists regional members
+traveling in other Regions</li>
+</ul>
+<h3 id="executive-council-coordination">Executive Council
+Coordination</h3>
+<p>The five elected heads of the Regional Executive offices form the
+Executive Council. This council coordinates executive operations,
+discusses inter-departmental matters, and ensures unified implementation
+of Regional policy.</p>
+<p><strong>Executive Authority:</strong></p>
+<ul>
+<li>Implement laws passed by the Regional Council</li>
+<li>Manage Regional budget and operations</li>
+<li>Provide public services to all Districts</li>
+<li>Sign or veto legislation (First Executive)</li>
+<li>Appoint department heads (subject to Council approval)</li>
+<li>No authority to remove elected officials</li>
+</ul>
+<p><strong>Executive Accountability:</strong></p>
+<ul>
+<li>All executive officials are directly elected by the people</li>
+<li>Subject to impeachment by Regional Council for cause</li>
+<li>Operations observed by Fair Witnesses for transparency</li>
+<li>Budget and spending subject to legislative approval</li>
+</ul>
+<div style="page-break-before: always;">
+</div>
+<h2 id="legislative-branch">Legislative Branch</h2>
+<p>The Legislative Branch is the primary law-making and oversight body
+within Terran Society. It operates at both <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> and Regional levels,
+with elected representatives directly accountable to the people they
+serve.</p>
+<h3 id="regional-council-of-the-people">Regional Council of the
+People</h3>
+<p><a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> legislative body with one seat per District, passes
+laws, approves budgets, charters cooperatives</p>
+<h4 id="structure-and-composition">Structure and Composition</h4>
+<p>The Regional Council consists of elected Representatives, with one
+<a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> per District. This ensures direct representation of local
+interests at the Regional level.</p>
+<h4 id="roles-and-responsibilities">Roles and Responsibilities</h4>
+<p><strong><a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a></strong></p>
+<p>Elected <a class="glossary-term" href="#glossary-representative" title="See glossary: representative">representative</a> from a District to the Regional Council of the
+People</p>
+<ul>
+<li><strong>Budget Approval</strong>: Approve regional budget on 1, 2,
+or 3 year cycle</li>
+<li><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a> Development</strong>: Work with Executive
+Council developing organizational models for Public Service
+Cooperatives</li>
+<li><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a> Chartering</strong>: Charter and fund approved
+public and private service cooperatives</li>
+<li><strong>Investigative Hearings</strong>: Hold public investigative
+hearings as needed</li>
+<li><strong>Environmental Standards</strong>: Legislate environmental
+protection standards for use of natural resources</li>
+<li><strong>Resource Allocation</strong>: Allocate land and water
+resources fairly with objective standards</li>
+<li><strong>Impeachment Authority</strong>: Impeach and remove elected
+officials of Executive, Judicial, or <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> for cause</li>
+<li><strong>Contributed Service Rules</strong>: Establish objective
+rules for Administrator to manage Contributed Service</li>
+<li><strong>Veto Override</strong>: Override Executive Council veto with
+three-fourths majority vote</li>
+<li><strong>Penalties Definition</strong>: Define major/minor violations
+and specify appropriate maximum and minimum penalties</li>
+</ul>
+<h4 id="administrative-roles">Administrative Roles</h4>
+<p><strong><a class="glossary-term" href="#glossary-council-speaker" title="See glossary: Council Speaker">Council Speaker</a></strong>: Presides over Council sessions,
+elected by Council members</p>
+<p><strong><a class="glossary-term" href="#glossary-council-clerk" title="See glossary: Council Clerk">Council Clerk</a></strong>: Maintains Council records, manages
+documentation and legislative process</p>
+<h4 id="legislative-authority">Legislative Authority</h4>
+<p>The Regional Council has authority to:</p>
+<ul>
+<li>Pass laws and spending legislation within their jurisdiction</li>
+<li>Approve major appointments by the First Executive</li>
+<li>Conduct investigative hearings and compel witnesses</li>
+<li>Define <a class="glossary-term" href="#glossary-representative" title="See glossary: representative">representative</a> districts (must be simple, not contorted)</li>
+<li>Impeach members of the Executive and Judicial branches for
+cause</li>
+<li>Charter organizations operating within the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></li>
+</ul>
+<p>All laws must conform to the Rights of the People without exception.
+All meetings must be observed by Fair Witnesses or proceedings are null
+and void.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="judicial-branch">Judicial Branch</h2>
+<p>The Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a> provides dispute resolution, rights protection,
+and justice through a multi-tiered court system. All judicial
+proceedings are public, observed by Fair Witnesses, and decided by
+citizen juries.</p>
+<h3 id="office-of-guarantor-of-rights">Office of Guarantor of
+Rights</h3>
+<p>Investigates rights violations, presents cases to Warrant <a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a>,
+watches over Sheriff and Executive officials</p>
+<h4 id="guarantor-of-rights">Guarantor of Rights</h4>
+<p>Investigates rights violations and serves as watchdog over Sheriff
+and Executive</p>
+<p><strong>Responsibilities:</strong></p>
+<ul>
+<li><strong>Rights Investigation</strong>: Investigate violations of
+Rights of the People</li>
+<li><strong>Warrant Presentation</strong>: Present evidence to Warrant
+<a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a> when search, arrest, or court appearance is required</li>
+<li><strong>Executive Oversight</strong>: Serve as watchdog of Sheriff
+and other Executive <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a> officials for the People</li>
+<li><strong>Impeachment Evidence</strong>: Present evidence for
+impeachment of officials to the legislative body</li>
+</ul>
+<p><strong><a class="glossary-term" href="#glossary-rights-investigator" title="See glossary: Rights Investigator">Rights Investigator</a></strong>: Investigates complaints of
+rights violations and gathers evidence</p>
+<h3 id="office-of-facilitator-of-the-court">Office of Facilitator of the
+Court</h3>
+<p>Presides over Major and Minor Courts, manages court process, advises
+<a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>, ensures procedural fairness</p>
+<h4 id="facilitator-of-the-court-conductor">Facilitator of the Court
+(Conductor)</h4>
+<p>Presides over Major and Minor Courts, manages court process and
+advises <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a></p>
+<p><strong>Responsibilities:</strong></p>
+<ul>
+<li><strong>Court Presiding</strong>: Preside over Minor and Major Court
+proceedings</li>
+<li><strong>Case Classification</strong>: Determine in which type of
+court (Minor or Major) the case should be heard</li>
+<li><strong><a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a> Advising</strong>: Advise the <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>, clarify issues, and
+answer their questions</li>
+<li><strong>Case Dismissal</strong>: Dismiss a case if that is clearly
+the just course of action</li>
+<li><strong>Mistrial Declaration</strong>: Abolish a <a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a> ruling or
+declare mistrial for cause and reschedule hearing</li>
+<li><strong>Misconduct Management</strong>: Remove anyone, even a <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>
+member, for misconduct</li>
+</ul>
+<p><strong><a class="glossary-term" href="#glossary-court-administrator" title="See glossary: Court Administrator">Court Administrator</a></strong>: Manages court facilities,
+scheduling, <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a> coordination, and court staff</p>
+<h3 id="office-of-public-arbitrator">Office of Public Arbitrator</h3>
+<p>Provides voluntary arbitration services for dispute resolution
+outside formal court system</p>
+<h4 id="public-arbitrator">Public Arbitrator</h4>
+<p>Provides voluntary arbitration services for dispute resolution</p>
+<p><strong>Responsibilities:</strong></p>
+<ul>
+<li><strong>Case Selection</strong>: Choose to accept cases for
+arbitration hearings</li>
+<li><strong>Arbitration Hearing</strong>: Conduct arbitration hearing
+and listen to all parties</li>
+<li><strong>Ruling Determination</strong>: Determine a fair and just
+ruling after hearing the case</li>
+<li><strong>Order Maintenance</strong>: Remove persons from hearing for
+misconduct</li>
+</ul>
+<h3 id="court-structure">Court Structure</h3>
+<p>The Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a> operates three types of courts:</p>
+<ul>
+<li><strong>Minor Courts</strong>: Handle petty criminal cases with
+7-person juries (6-of-7 verdict required)</li>
+<li><strong>Major Courts</strong>: Handle serious criminal cases with
+14-person juries (12-of-14 verdict required)</li>
+<li><strong>Arbitration Courts</strong>: Voluntary binding arbitration
+for civil disputes</li>
+</ul>
+<p>All courts require three Certified Fair Witnesses in attendance.
+Juries are selected from Citizens, and the Facilitator presides to
+ensure procedural fairness.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="the-fair-witness-branch">The Fair Witness Branch</h2>
+<p>The <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> branch provides independent, objective observation
+and record-keeping for all Society operations. Inspired by Robert A.
+Heinlein’s “Stranger in a Strange Land”, this concept resolves a
+critical problem: those in power cannot be trusted to keep proper
+records on themselves. Fair Witnesses are trained to be impartial,
+non-biased witnesses with linguistic mastery and keen observation
+skills. Their independence ensures badly needed credibility, fairness,
+and openness.</p>
+<h3 id="purpose-and-independence">Purpose and Independence</h3>
+<p>Fair Witnesses resolve the problem of record-keeping through absolute
+independence. They are trained as impartial, non-biased witnesses with
+linguistic mastery and keen observation skills. Their role is strictly
+observational—they have no other authority. This is not a police
+role.</p>
+<p>It is a criminal act to influence a <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> in any way that
+could compromise them. This would be a violation of Rights where the
+victim is the whole Society. Fair Witnesses are the only designated
+group with such protective status.</p>
+<h3 id="training-hierarchy">Training Hierarchy</h3>
+<h4 id="fair-witness-trainee">Fair Witness Trainee</h4>
+<p>Qualified person accepted into <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> training program</p>
+<p>Qualified persons accepted into the program undergo 3-7 years of
+highly demanding training. Curriculum includes observation skills,
+memorization techniques, recall accuracy, documentation standards,
+linguistic mastery, and ethical conduct. Must pass all required
+coursework and testing. Graduates announced in public ceremony.</p>
+<h4 id="fair-witness-apprentice">Fair Witness Apprentice</h4>
+<p>Graduate of training program qualified to assist Certified Fair
+Witnesses</p>
+<p>Apprentices have completed schooling and testing but need real-world
+experience. Assigned to <a class="glossary-term" href="#glossary-certified-fair-witness" title="See glossary: Certified Fair Witness">Certified Fair Witness</a> mentor for duration and
+criteria set by Senior Fair Witness Panel. Not ready for independent
+assignment. Mentor reports to panel when ready for Certification.
+Certification announced in public ceremony.</p>
+<h4 id="certified-fair-witness">Certified Fair Witness</h4>
+<p>Certified observer qualified to record proceedings and maintain
+public records</p>
+<p>Full rights and privileges to assume role with trust of the People.
+May be assigned to independent duty with unrestricted access to
+Executive, Legislative, and Judicial branches. Creates and maintains
+records, meeting minutes, logs for all Citizens. Must wear
+badge/symbol/attire for open identification. Must remain sober and
+independent. Life appointment unless compromised, resigned, or
+retired.</p>
+<h4 id="senior-certified-fair-witness">Senior Certified Fair
+Witness</h4>
+<p>Senior <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> with extensive honorable service</p>
+<p>Eligible to serve on <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> panels after specified years of CFW
+service. Retains CFW status. May be temporarily relieved for panel
+duties. Manages libraries and support staff. CFWs too demanding for
+managerial duties - SCFW handles administration. Hires and manages
+Citizen support staff who assist with day-to-day library tasks.</p>
+<h3 id="fair-witness-panels">Fair Witness Panels</h3>
+<p>Fair Witnesses are governed by a two-tiered panel system consistent
+with the Regional and World structure. These panels oversee
+administration of the <a class="glossary-term" href="#glossary-branch" title="See glossary: branch">branch</a>, with full authority to de-certify,
+reprimand, or order additional training of Certified Fair Witnesses.</p>
+<h4 id="regional-fair-witness-council">Regional Fair Witness
+Council</h4>
+<p>Nine-member elected council managing <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> operations,
+training, and certification in the Region</p>
+<p><strong>Regional Panel Structure</strong>: Nine-member panel serving
+staggered 9-year terms with three members elected every three years.
+Only Senior Certified Fair Witnesses and Certified Fair Witnesses with
+1+ year local service may vote. Panel members must have completed
+minimum three years as CFW. Responsible for administration, criteria
+implementation, performance reviews, and de-certification authority
+within the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a>.</p>
+<h4 id="world-fair-witness-council">World Fair Witness Council</h4>
+<p>Twenty-seven member council elected from Senior Certified Fair
+Witnesses for nine-year terms</p>
+<p><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Panel Structure</strong>: Nine Senior Certified Fair
+Witnesses serving staggered 9-year terms with three elected every three
+years. Only SCFW eligible to vote, preventing politicization. Panel sets
+criteria, training, testing, and performance standards for entire <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>.
+Selects panel leader each three-year cycle. Panel members may serve
+maximum 12 years.</p>
+<h3 id="fair-witness-responsibilities">Fair Witness
+Responsibilities</h3>
+<p>Fair Witnesses serve as record keepers and librarians for all Society
+operations:</p>
+<ul>
+<li><strong>Unrestricted Access</strong>: Fair Witnesses have
+unrestricted access to Executive, Legislative, and Judicial <a class="glossary-term" href="#glossary-branch" title="See glossary: branch">branch</a>
+operations</li>
+<li><strong>Record Keeping</strong>: Prepare and maintain meeting
+minutes, logs, and all manner of records</li>
+<li><strong>Library Management</strong>: Create and maintain freely
+accessible libraries of records for all Citizens</li>
+<li><strong>Linguistic Mastery</strong>: Must be fluent in all languages
+used in Society operations</li>
+<li><strong>Observation Only</strong>: No other authority beyond
+observation and documentation</li>
+<li><strong>Identification</strong>: Must wear visible badge, symbol, or
+attire to openly identify their presence</li>
+</ul>
+<h3 id="accountability-and-recall">Accountability and Recall</h3>
+<p>While Fair Witnesses hold life appointments, they can be removed for
+breach of trust through a careful process designed to prevent political
+abuse. A Citizen complaint must be endorsed by both a Regional
+<a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> AND the Regional Executive, then approved by majority
+vote of the Regional Council. This same-tier requirement ensures Fair
+Witnesses cannot be removed for political reasons while maintaining
+accountability to the People.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="world-level-governance">World Level Governance</h2>
+<p>The World tier coordinates matters that span Regions, including
+planetary defense, inter-Regional disputes, world-wide infrastructure,
+and relations with other civilizations. The World level mirrors the
+Regional structure with Executive, Legislative, Judicial, <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a>,
+and Military branches.</p>
+<h3 id="world-executive-branch">World Executive Branch</h3>
+<p>The <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Executive administers planetary-scale services,
+infrastructure, and operations. It coordinates between Regions and
+manages relations with external parties.</p>
+<h4 id="world-executive-council">World Executive Council</h4>
+<p>Five-member council coordinating <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>-level executive functions with
+rotational leadership</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li>Sign or veto bills approved by <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Legislature</li>
+<li>Appoint Senior Military Officer (pending Senate approval)</li>
+<li>Primary civilian oversight of the Military</li>
+<li>Coordinate <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>-wide infrastructure projects</li>
+<li>Space exploration and off-planet civilian operations</li>
+</ul>
+<h4 id="office-of-world-administrator">Office of World
+Administrator</h4>
+<p>Coordinates standards, best practices, and inter-regional
+administrative matters</p>
+<h4 id="office-of-world-treasurer">Office of World Treasurer</h4>
+<p>Manages <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> currency, coordinates regional financial systems,
+oversees world budget</p>
+<h4 id="office-of-world-ambassador">Office of World Ambassador</h4>
+<p>Manages relations with external entities and coordinates
+inter-regional diplomatic efforts</p>
+<h4 id="office-of-world-sheriff">Office of World Sheriff</h4>
+<p>Coordinates inter-regional law enforcement, assists with crimes
+spanning multiple Regions</p>
+<h4 id="office-of-world-environmental-guardian">Office of World
+Environmental Guardian</h4>
+<p>Coordinates <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>-wide environmental monitoring, sets world
+environmental standards</p>
+<h3 id="world-legislative-branch">World Legislative Branch</h3>
+<p>The World Legislature consists of two bodies: the Council of the
+Regions (similar to a Senate) representing Regional interests, and the
+<a class="glossary-term" href="#glossary-world-council-of-the-people" title="See glossary: World Council of the People">World Council of the People</a> providing direct representation.</p>
+<h4 id="council-of-the-regions">Council of the Regions</h4>
+<p>Legislative body with equal representation from each <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></p>
+<p><strong>Authority:</strong></p>
+<ul>
+<li>Approve Senior Military Officer appointment</li>
+<li>Approve treaties before submission to Citizens for ratification</li>
+<li>Provide oversight of <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Executive operations</li>
+</ul>
+<h4 id="world-council-of-the-people">World Council of the People</h4>
+<p>Population-based legislative body representing all members of Terran
+Society</p>
+<p><strong>Legislative Authority:</strong></p>
+<ul>
+<li>Military oversight and resource allocation</li>
+<li><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>-wide standards (weights, measures, timekeeping)</li>
+<li>Laws of <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> commerce and infrastructure</li>
+<li>Charter organizations operating on planetary scale or in space</li>
+<li>Define structure and procedures of <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> institutions</li>
+</ul>
+<h3 id="world-judicial-system">World Judicial System</h3>
+<p>The <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Court operates differently from Regional courts. It handles
+disputes between Regions or between Terran Society and external parties.
+It is not a criminal court.</p>
+<p><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Court Structure:</strong></p>
+<ul>
+<li><strong>Conductor</strong>: Elected by sitting Regional
+Facilitators, must have served at least one full term at Regional
+level</li>
+<li><strong><a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a></strong>: 21 jurors selected from Citizens who served
+at least one term in <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Legislature</li>
+<li><strong>Verdict</strong>: Requires 19-of-21 majority vote</li>
+<li><strong>Fair Witnesses</strong>: Three Certified Fair Witnesses
+required in attendance</li>
+<li><strong>Purpose</strong>: Serious dispute resolution between
+Regions, or between Terran Society and outside parties (other
+civilizations, non-humans)</li>
+</ul>
+<p>The <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Court’s decisions are binding on the parties. Treaty
+disputes may be resolved here, but any resulting treaty still requires
+ratification by vote of all Citizens.</p>
+<h3 id="world-fair-witness-branch">World Fair Witness Branch</h3>
+<p>The <a class="glossary-term" href="#glossary-world-fair-witness-council" title="See glossary: World Fair Witness Council">World Fair Witness Council</a> operates at planetary scale, setting
+standards and criteria for all Fair Witness training, testing, and
+certification.</p>
+<p>Twenty-seven member council elected from Senior Certified Fair
+Witnesses for nine-year terms</p>
+<p>See the <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Branch chapter for details on the World Fair
+Witness Council structure and authority.</p>
+<h3 id="military-branch">Military Branch</h3>
+<p>The Military <a class="glossary-term" href="#glossary-branch" title="See glossary: Branch">Branch</a> exists solely at the World level and operates
+under strict civilian oversight. It is responsible for planetary defense
+and intelligence gathering.</p>
+<h4 id="world-defense-force">World Defense Force</h4>
+<p>Unified military organization for <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> defense with minimal active
+duty and large reserve force</p>
+<p><strong>Key Principles:</strong></p>
+<ul>
+<li><strong>Civilian Oversight</strong>: Senior Military Officer
+appointed by <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Executive, approved by Senate</li>
+<li><strong>Unified Structure</strong>: Single organization with
+departmentalized functions</li>
+<li><strong>Defensive Purpose</strong>: Primary mission is planetary
+defense, not offensive operations</li>
+<li><strong>Limited Authority</strong>: Cannot act without civilian
+authorization</li>
+<li><strong>Transparency</strong>: Operations observed by Fair Witnesses
+where practical and appropriate</li>
+</ul>
+<h4 id="defense-force-intelligence">Defense Force Intelligence</h4>
+<p>Intelligence collection and analysis for <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> defense, subject to
+oversight</p>
+<h4 id="defense-force-council">Defense Force Council</h4>
+<p>Nine-member council commanding the Defense Force with mixed civilian
+and military membership</p>
+<p><strong>Military Accountability:</strong></p>
+<ul>
+<li>Resource allocation controlled by <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Legislature</li>
+<li>Operations subject to <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Executive approval</li>
+<li>Personnel bound by the Rights of the People</li>
+<li>Subject to impeachment and removal for violations</li>
+</ul>
+<div style="page-break-before: always;">
+</div>
+<h2 id="processes-and-procedures">Processes and Procedures</h2>
+<p>Terran Society operates through clearly defined processes that ensure
+transparency, fairness, and accountability. These processes govern
+elections, judicial proceedings, and <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> certification.</p>
+<h3 id="election-processes">Election Processes</h3>
+<h4 id="district-council-of-elders-election-process">District Council of
+Elders Election Process</h4>
+<p>Three-year election cycle with staggered terms. One-third of Elders
+up for election each year. Seven to nine Elders depending on <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a>
+population. No term limits. Candidates must demonstrate compassion and
+love for children, preferably at least 55 years of age. Physical ballots
+verified by voters, counted publicly, retained for 10 years. No party
+affiliation required, no money in campaigns.</p>
+<h4 id="regional-council-representative-election">Regional Council
+Representative Election</h4>
+<p>Each District elects one <a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> to Regional Council of the
+People. Provides direct representation in Regional legislation.
+Elections managed by Administrator Department with transparent candidate
+disclosure, public forums for debate, physical ballots verified and
+counted publicly.</p>
+<h3 id="judicial-processes">Judicial Processes</h3>
+<h4 id="regional-minor-court-procedure">Regional Minor Court
+Procedure</h4>
+<p>Handles petty criminal cases. Seven-person jury requires 6-of-7
+verdict to resolve case. <a class="glossary-term" href="#glossary-facilitator-of-the-court" title="See glossary: Facilitator of the Court">Facilitator of the Court</a> (Conductor) presides,
+manages process, advises jury, ensures procedural fairness. Three
+Certified Fair Witnesses must be in attendance. Jury selected from
+Citizens.</p>
+<h4 id="regional-major-court-procedure">Regional Major Court
+Procedure</h4>
+<p>Handles serious criminal cases. Fourteen-person jury requires
+12-of-14 verdict to resolve case. <a class="glossary-term" href="#glossary-facilitator-of-the-court" title="See glossary: Facilitator of the Court">Facilitator of the Court</a> presides.
+Three Certified Fair Witnesses required. More serious matters with
+higher threshold for conviction.</p>
+<h4 id="world-court-procedure">World Court Procedure</h4>
+<p>Handles disputes between Regions or between <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Society and outside
+parties. Twenty-one person jury requires 19-of-21 vote. Jury selected
+from Citizens who served at least one term in World Legislature. Three
+Certified Fair Witnesses required. Conductor elected by sitting Regional
+Conductors, must have served at least one full six-year term as Regional
+Conductor.</p>
+<h3 id="fair-witness-processes">Fair Witness Processes</h3>
+<h4 id="fair-witness-training-and-certification-process">Fair Witness
+Training and Certification Process</h4>
+<p>Phase 1: Trainee - Qualified applicants undergo 3-7 years training in
+observation, memorization, recall, documentation, linguistics, ethics.
+Graduate in public ceremony. Phase 2: Apprentice - Assigned to mentor
+for real-<a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> experience, duration set by Senior Panel. Phase 3:
+Certification - Mentor reports readiness to panel, public certification
+ceremony grants full CFW status with unrestricted access and life
+appointment.</p>
+<h3 id="election-processes-1">Election Processes</h3>
+<h4 id="fair-witness-council-election-process">Fair Witness Council
+Election Process</h4>
+<p>Regional: Nine members, staggered 9-year terms, three elected every
+three years. Only SCFW and CFW with 1+ year local service may vote. CFW
+with 3+ years may be nominated. <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>: Nine SCFW members, same term
+structure. Only SCFW may vote or be nominated. Prevents politicization.
+Panel selects leader every three years.</p>
+<h3 id="fair-witness-processes-1">Fair Witness Processes</h3>
+<h4 id="fair-witness-de-certification-process">Fair Witness
+De-certification Process</h4>
+<p>Citizen complaint of breach of trust submitted to Fair Witness Panel.
+If unresolved, requires endorsement by Regional <a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> AND
+Regional Executive. Only with majority vote by Regional Council and
+First Executive signature can Fair Witness be stripped of status.
+Same-tier endorsement required to prevent political abuse. Life
+appointment otherwise.</p>
+<div style="page-break-before: always;">
+</div>
+<h2 id="glossary">Glossary</h2>
+<p><span id="glossary-arbitration"></span><strong>Arbitration</strong>:
+A method of dispute resolution where parties voluntarily agree to have
+an <a class="glossary-term" href="#glossary-arbitrator" title="See glossary: Arbitrator">Arbitrator</a> hear their case and make a binding decision.</p>
+<p><span id="glossary-arbitrator"></span><strong><a class="glossary-term" href="#glossary-arbitrator" title="See glossary: Arbitrator">Arbitrator</a></strong>: An
+elected official who conducts arbitration hearings and issues binding
+rulings.</p>
+<p><span id="glossary-certified-fair-witness"></span><strong>Certified
+<a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a></strong>: Certified observer qualified to record
+proceedings and maintain public records</p>
+<p><span id="glossary-chief-investigator"></span><strong>Chief
+Investigator</strong>: Leads criminal investigations and forensic
+laboratory operations</p>
+<p><span id="glossary-consular-officer"></span><strong>Consular
+Officer</strong>: Assists regional members traveling in other
+Regions</p>
+<p><span id="glossary-cooperative"></span><strong><a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a></strong>:
+An organization owned and controlled by its members or workers,
+operating for mutual benefit rather than profit.</p>
+<p><span id="glossary-council-clerk"></span><strong>Council
+Clerk</strong>: Maintains Council records, manages documentation and
+legislative process</p>
+<p><span id="glossary-council-speaker"></span><strong>Council
+Speaker</strong>: Presides over Council sessions, elected by Council
+members</p>
+<p><span id="glossary-council-of-elders"></span><strong>Council of
+Elders</strong>: Primary governance body at the <a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a> level, focused
+on family welfare, dispute resolution, and community cohesion</p>
+<p><span id="glossary-council-of-the-regions"></span><strong>Council of
+the Regions</strong>: Legislative body with equal representation from
+each <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></p>
+<p><span id="glossary-court-administrator"></span><strong>Court
+Administrator</strong>: Manages court facilities, scheduling, <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>
+coordination, and court staff</p>
+<p><span id="glossary-defense-force-council"></span><strong>Defense
+Force Council</strong>: Nine-member council commanding the Defense Force
+with mixed civilian and military membership</p>
+<p><span id="glossary-defense-force-intelligence"></span><strong>Defense
+Force Intelligence</strong>: Intelligence collection and analysis for
+<a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> defense, subject to oversight</p>
+<p><span id="glossary-deputy-administrator"></span><strong>Deputy
+Administrator</strong>: Assists Administrator and may act in their
+absence</p>
+<p><span id="glossary-deputy-ambassador"></span><strong>Deputy
+Ambassador</strong>: Assists Ambassador in diplomatic and economic
+development functions</p>
+<p><span id="glossary-deputy-environmental-guardian"></span><strong>Deputy
+Environmental Guardian</strong>: Assists Environmental Guardian in
+environmental operations</p>
+<p><span id="glossary-deputy-sheriff"></span><strong>Deputy
+Sheriff</strong>: Senior law enforcement officer assisting Sheriff in
+operations</p>
+<p><span id="glossary-deputy-treasurer"></span><strong>Deputy
+Treasurer</strong>: Assists Treasurer and manages specific financial
+departments</p>
+<p><span id="glossary-director-of-audits"></span><strong>Director of
+Audits</strong>: Conducts audits of regional management, businesses, and
+cooperatives</p>
+<p><span id="glossary-director-of-budget"></span><strong>Director of
+Budget</strong>: Prepares budget proposals and monitors budget
+execution</p>
+<p><span id="glossary-director-of-elections"></span><strong>Director of
+Elections</strong>: Manages clean, transparent election process
+including public forums for debate</p>
+<p><span id="glossary-director-of-environmental-monitoring"></span><strong>Director
+of Environmental Monitoring</strong>: Oversees pollution testing and
+environmental damage assessment</p>
+<p><span id="glossary-director-of-infrastructure"></span><strong>Director of
+Infrastructure</strong>: Oversees communications, networking, and
+infrastructure systems</p>
+<p><span id="glossary-director-of-public-services"></span><strong>Director of
+Public Services</strong>: Coordinates creation and oversight of Public
+Service Cooperatives</p>
+<p><span id="glossary-director-of-restoration"></span><strong>Director
+of Restoration</strong>: Plans and implements ecosystem restoration
+projects</p>
+<p><span id="glossary-district"></span><strong><a class="glossary-term" href="#glossary-district" title="See glossary: District">District</a></strong>: The
+smallest tier of Terran Society, typically 5,000 to 21,000 people,
+governed by a <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a>.</p>
+<p><span id="glossary-economic-development-director"></span><strong>Economic
+Development Director</strong>: Promotes commerce, trade, and economic
+opportunities for the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></p>
+<p><span id="glossary-elder"></span><strong><a class="glossary-term" href="#glossary-elder" title="See glossary: Elder">Elder</a></strong>: Member of
+the District <a class="glossary-term" href="#glossary-council-of-elders" title="See glossary: Council of Elders">Council of Elders</a> serving the community</p>
+<p><span id="glossary-elder-council-chair"></span><strong><a class="glossary-term" href="#glossary-elder" title="See glossary: Elder">Elder</a> Council
+Chair</strong>: Coordinates Council meetings and agenda, elected by
+fellow Elders</p>
+<p><span id="glossary-facilitator-of-the-court"></span><strong>Facilitator of the
+Court</strong>: Presides over Major and Minor Courts, manages court
+process and advises <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a></p>
+<p><span id="glossary-fair-witness"></span><strong>Fair
+Witness</strong>: An independent, certified observer who records Society
+proceedings objectively.</p>
+<p><span id="glossary-fair-witness-apprentice"></span><strong>Fair
+Witness Apprentice</strong>: Graduate of training program qualified to
+assist Certified Fair Witnesses</p>
+<p><span id="glossary-fair-witness-trainee"></span><strong><a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a>
+Trainee</strong>: Qualified person accepted into <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> training
+program</p>
+<p><span id="glossary-fair-witness-training-academy"></span><strong>Fair
+Witness Training Academy</strong>: Rigorous training program for
+observation skills, memorization, recall, documentation, and ethical
+standards</p>
+<p><span id="glossary-guarantor-of-rights"></span><strong>Guarantor of
+Rights</strong>: Investigates rights violations and serves as watchdog
+over Sheriff and Executive</p>
+<p><span id="glossary-jury"></span><strong><a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a></strong>: A group of
+citizens who decide the outcome of court cases.</p>
+<p><span id="glossary-marshal"></span><strong><a class="glossary-term" href="#glossary-marshal" title="See glossary: Marshal">Marshal</a></strong>: Field
+law enforcement officer trained in non-lethal force and
+investigation</p>
+<p><span id="glossary-office-of-facilitator-of-the-court"></span><strong>Office
+of <a class="glossary-term" href="#glossary-facilitator-of-the-court" title="See glossary: Facilitator of the Court">Facilitator of the Court</a></strong>: Presides over Major and Minor
+Courts, manages court process, advises <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>, ensures procedural
+fairness</p>
+<p><span id="glossary-office-of-guarantor-of-rights"></span><strong>Office of
+<a class="glossary-term" href="#glossary-guarantor-of-rights" title="See glossary: Guarantor of Rights">Guarantor of Rights</a></strong>: Investigates rights violations, presents
+cases to Warrant <a class="glossary-term" href="#glossary-jury" title="See glossary: Jury">Jury</a>, watches over Sheriff and Executive officials</p>
+<p><span id="glossary-office-of-public-arbitrator"></span><strong>Office
+of <a class="glossary-term" href="#glossary-public-arbitrator" title="See glossary: Public Arbitrator">Public Arbitrator</a></strong>: Provides voluntary arbitration services
+for dispute resolution outside formal court system</p>
+<p><span id="glossary-office-of-regional-administrator"></span><strong>Office of
+<a class="glossary-term" href="#glossary-regional-administrator" title="See glossary: Regional Administrator">Regional Administrator</a></strong>: Manages Regional operations,
+facilities, staffing, elections, and public service infrastructure</p>
+<p><span id="glossary-office-of-regional-ambassador"></span><strong>Office of
+<a class="glossary-term" href="#glossary-regional-ambassador" title="See glossary: Regional Ambassador">Regional Ambassador</a></strong>: Promotes commerce, tourism, economic
+development, and assists regional members traveling in other Regions</p>
+<p><span id="glossary-office-of-regional-environmental-guardian"></span><strong>Office
+of <a class="glossary-term" href="#glossary-regional-environmental-guardian" title="See glossary: Regional Environmental Guardian">Regional Environmental Guardian</a></strong>: Environmental protection,
+pollution monitoring, ecosystem restoration, and enforcement of
+environmental standards</p>
+<p><span id="glossary-office-of-regional-sheriff"></span><strong>Office
+of <a class="glossary-term" href="#glossary-regional-sheriff" title="See glossary: Regional Sheriff">Regional Sheriff</a></strong>: Protects Rights of the People, conducts
+investigations, maintains public safety, and emergency response</p>
+<p><span id="glossary-office-of-regional-treasurer"></span><strong>Office of
+<a class="glossary-term" href="#glossary-regional-treasurer" title="See glossary: Regional Treasurer">Regional Treasurer</a></strong>: Manages regional budget, taxation, benefits
+accounts, audits, and financial oversight</p>
+<p><span id="glossary-office-of-world-administrator"></span><strong>Office of
+<a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Administrator</strong>: Coordinates standards, best practices, and
+inter-regional administrative matters</p>
+<p><span id="glossary-office-of-world-ambassador"></span><strong>Office
+of <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Ambassador</strong>: Manages relations with external entities
+and coordinates inter-regional diplomatic efforts</p>
+<p><span id="glossary-office-of-world-environmental-guardian"></span><strong>Office
+of <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Environmental Guardian</strong>: Coordinates <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>-wide
+environmental monitoring, sets world environmental standards</p>
+<p><span id="glossary-office-of-world-sheriff"></span><strong>Office of
+<a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Sheriff</strong>: Coordinates inter-regional law enforcement,
+assists with crimes spanning multiple Regions</p>
+<p><span id="glossary-office-of-world-treasurer"></span><strong>Office
+of <a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Treasurer</strong>: Manages <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> currency, coordinates
+regional financial systems, oversees world budget</p>
+<p><span id="glossary-public-arbitrator"></span><strong>Public
+<a class="glossary-term" href="#glossary-arbitrator" title="See glossary: Arbitrator">Arbitrator</a></strong>: Provides voluntary arbitration services for dispute
+resolution</p>
+<p><span id="glossary-public-service-cooperative"></span><strong>Public
+Service <a class="glossary-term" href="#glossary-cooperative" title="See glossary: Cooperative">Cooperative</a></strong>: A chartered organization that provides
+public services like utilities, transit, or ports.</p>
+<p><span id="glossary-region"></span><strong><a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></strong>: The
+primary governance tier, with complete executive, legislative, judicial,
+and <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> branches. Maximum population 20-25 million.</p>
+<p><span id="glossary-regional-administrator"></span><strong>Regional
+Administrator</strong>: Chief administrative officer managing Regional
+operations and infrastructure</p>
+<p><span id="glossary-regional-ambassador"></span><strong>Regional
+Ambassador</strong>: Chief diplomatic officer promoting commerce,
+tourism, and regional interests</p>
+<p><span id="glossary-regional-arbitration-court"></span><strong>Regional
+Arbitration Court</strong>: Voluntary dispute resolution forum with
+binding arbitration</p>
+<p><span id="glossary-regional-council-of-the-people"></span><strong>Regional
+Council of the People</strong>: <a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a> legislative body with one
+seat per District, passes laws, approves budgets, charters
+cooperatives</p>
+<p><span id="glossary-regional-environmental-guardian"></span><strong>Regional
+Environmental Guardian</strong>: Chief environmental officer for
+regional environmental protection and restoration</p>
+<p><span id="glossary-regional-executive-council"></span><strong>Regional
+Executive Council</strong>: Coordinating body of the five executive
+departments, sharing leadership on a rotational basis</p>
+<p><span id="glossary-regional-fair-witness-council"></span><strong>Regional Fair
+Witness Council</strong>: Nine-member elected council managing Fair
+Witness operations, training, and certification in the <a class="glossary-term" href="#glossary-region" title="See glossary: Region">Region</a></p>
+<p><span id="glossary-regional-fair-witness-councilor"></span><strong>Regional
+<a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Councilor</strong>: Elected member of nine-person Regional
+<a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Council</p>
+<p><span id="glossary-regional-major-court"></span><strong>Regional
+Major Court</strong>: Handles serious criminal cases with 14-person <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>
+(12-of-14 verdict required)</p>
+<p><span id="glossary-regional-minor-court"></span><strong>Regional
+Minor Court</strong>: Handles petty criminal cases with 7-person <a class="glossary-term" href="#glossary-jury" title="See glossary: jury">jury</a>
+(6-of-7 verdict required)</p>
+<p><span id="glossary-regional-sheriff"></span><strong>Regional
+Sheriff</strong>: Chief law enforcement officer responsible for
+protecting Rights of the People</p>
+<p><span id="glossary-regional-treasurer"></span><strong>Regional
+Treasurer</strong>: Chief financial officer managing regional budget,
+taxation, and financial oversight</p>
+<p><span id="glossary-representative"></span><strong><a class="glossary-term" href="#glossary-representative" title="See glossary: Representative">Representative</a></strong>:
+Elected <a class="glossary-term" href="#glossary-representative" title="See glossary: representative">representative</a> from a District to the Regional Council of the
+People</p>
+<p><span id="glossary-rights-investigator"></span><strong>Rights
+Investigator</strong>: Investigates complaints of rights violations and
+gathers evidence</p>
+<p><span id="glossary-senior-certified-fair-witness"></span><strong>Senior
+<a class="glossary-term" href="#glossary-certified-fair-witness" title="See glossary: Certified Fair Witness">Certified Fair Witness</a></strong>: Senior <a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> with extensive
+honorable service</p>
+<p><span id="glossary-training-director"></span><strong>Training
+Director</strong>: Oversees <a class="glossary-term" href="#glossary-fair-witness-training-academy" title="See glossary: Fair Witness training academy">Fair Witness training academy</a> and
+certification process</p>
+<p><span id="glossary-world"></span><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a></strong>: The
+planetary <a class="glossary-term" href="#glossary-tier" title="See glossary: tier">tier</a> coordinating matters that span regions.</p>
+<p><span id="glossary-world-council-of-the-people"></span><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>
+Council of the People</strong>: Population-based legislative body
+representing all members of Terran Society</p>
+<p><span id="glossary-world-defense-force"></span><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a> Defense
+Force</strong>: Unified military organization for <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a> defense with
+minimal active duty and large reserve force</p>
+<p><span id="glossary-world-executive-council"></span><strong><a class="glossary-term" href="#glossary-world" title="See glossary: World">World</a>
+Executive Council</strong>: Five-member council coordinating <a class="glossary-term" href="#glossary-world" title="See glossary: world">world</a>-level
+executive functions with rotational leadership</p>
+<p><span id="glossary-world-fair-witness-council"></span><strong>World
+<a class="glossary-term" href="#glossary-fair-witness" title="See glossary: Fair Witness">Fair Witness</a> Council</strong>: Twenty-seven member council elected from
+Senior Certified Fair Witnesses for nine-year terms</p>
+</body>
+</html>
